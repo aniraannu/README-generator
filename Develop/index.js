@@ -1,8 +1,8 @@
 // Declaring the dependencies and variables
 const fs = require("fs");
 const inquirer = require("inquirer");
-//const generateReadme = require("./utils/generateReadme")
-//const writeFileAsync = util.promisify(fs.writeFile);
+const generateReadme = require("./utils/generateMarkdown.js")
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // TODO: Create an array of questions for user input
 const questions = [[
@@ -24,7 +24,7 @@ const questions = [[
         //Installation
         type: "input",
         name: "installation",
-        message: "Describe the installation process if any: ",
+        message: "Describe the installation process if any (if providing code snippet, enclose in backticks):",
         validate: (value)=>{if(value){return true} else {return 'I need a value to continue'}},
     },
     {
