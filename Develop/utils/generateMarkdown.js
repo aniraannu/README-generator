@@ -68,7 +68,7 @@ This project is licensed under the [${license}](${licenseLink}) license.
 function generateMarkdown(answers) {
   renderLicenseSection();
   return `
-  # ${answers.title}
+  # ${answers.projectTitle}
   
   ## Table of Contents
   - [Description](#description)
@@ -98,7 +98,7 @@ function generateMarkdown(answers) {
   ${answers.tests}
   
   ## Questions
-  If you have any questions or need further assistance, please feel free to reach out to me on [GitHub](https://github.com/${answers.github}) or via email at ${answers.email}.
+  If you have any questions or need further assistance, please feel free to reach out to me on [GitHub](https://github.com/${answers.username}) or via email at ${answers.email}.
     `;
 }
 module.exports = generateMarkdown;
